@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #2a2a72;
+	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 24%);
+}
