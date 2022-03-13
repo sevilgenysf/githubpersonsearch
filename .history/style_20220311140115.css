@@ -84,10 +84,8 @@ input:focus {
 
 .user-info ul li {
 	display: flex;
-	align-items: center;
 }
 
 .user-info ul strong {
 	font-size: 0.8rem;
-	margin-left: 0.5rem;
 }

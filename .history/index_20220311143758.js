@@ -32,9 +32,8 @@ function createUserCard(user) {
 				<ul class="repos" id="repos"> </ul>
 			</div>
 		</div>
+	
 	`;
-
-	fetchRepos();
 
 	main.innerHTML = cardHTML;
 }

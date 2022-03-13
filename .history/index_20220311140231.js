@@ -25,16 +25,13 @@ function createUserCard(user) {
 
 				<ul class="info">
 					<li>${user.followers} <strong>Followers</strong></li>
-					<li>${user.following} <strong>Following</strong></li>
-					<li>${user.public_repos} <strong>Repos</strong></li>
+					<li><strong>Following</strong>${user.following}</li>
+					<li><strong>Repos</strong>${user.public_repos}</li>
 				</ul>
-
-				<ul class="repos" id="repos"> </ul>
 			</div>
 		</div>
+	
 	`;
-
-	fetchRepos();
 
 	main.innerHTML = cardHTML;
 }

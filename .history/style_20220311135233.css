@@ -31,11 +31,7 @@ input {
 }
 
 input::placeholder {
-	color: #bbb;
-}
-
-input:focus {
-	outline: none;
+	color: #bbb
 }
 
 .card {
@@ -80,14 +76,4 @@ input:focus {
 	width: 300px;
 	list-style-type: none;
 	margin-top: 20px;
-}
-
-.user-info ul li {
-	display: flex;
-	align-items: center;
-}
-
-.user-info ul strong {
-	font-size: 0.8rem;
-	margin-left: 0.5rem;
 }

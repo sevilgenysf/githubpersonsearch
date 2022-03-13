@@ -28,13 +28,10 @@ function createUserCard(user) {
 					<li>${user.following} <strong>Following</strong></li>
 					<li>${user.public_repos} <strong>Repos</strong></li>
 				</ul>
-
-				<ul class="repos" id="repos"> </ul>
 			</div>
 		</div>
+	
 	`;
-
-	fetchRepos();
 
 	main.innerHTML = cardHTML;
 }

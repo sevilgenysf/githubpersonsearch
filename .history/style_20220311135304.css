@@ -81,13 +81,3 @@ input:focus {
 	list-style-type: none;
 	margin-top: 20px;
 }
-
-.user-info ul li {
-	display: flex;
-	align-items: center;
-}
-
-.user-info ul strong {
-	font-size: 0.8rem;
-	margin-left: 0.5rem;
-}
