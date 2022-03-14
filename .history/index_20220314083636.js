@@ -48,20 +48,14 @@ function createUserCard(user) {
 
 function addReposToCard(repos) {
 	const reposEl = document.getElementById('repos');
-	console.log(repos);
 
-	repos
-		.sort((a, b) => b.stargazers_count - a.stargazers_count)
-		.slice(0, 9)
-		.forEach((repo) => {
-			const repoEl = document.createElement('span');
-			repoEl.classList.add('repo');
-			repoEl.href = repo.html_url;
-			repoEl.target = '_blank';
-			repoEl.innerText = repo.name;
-
-			reposEl.appendChild(repoEl);
-		});
+	repos.forEach((repo) => {
+		const repoEl = document.createElement('span');
+		repoEl.classList.add('repo');
+		repoEl.href = repo.html_url;
+		repoEl.target = '_blank';
+		repoEl.innerText = repo.name;
+	});
 }
 
 form.addEventListener('submit', (e) => {

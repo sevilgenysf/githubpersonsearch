@@ -9,17 +9,6 @@ getUser('sevilgenysf');
 async function getUser(username) {
 	const resp = await fetch(APIURL + username);
 	const respData = await resp.json();
-
-	createUserCard(respData);
-
-	getRepos(username);
-}
-
-async function getRepos(username) {
-	const resp = await fetch(APIURL + username + '/repos');
-	const respData = await resp.json();
-
-	addReposToCard(respData);
 }
 
 function createUserCard(user) {
@@ -38,30 +27,14 @@ function createUserCard(user) {
 					<li>${user.public_repos} <strong>Repos</strong></li>
 				</ul>
 
-				<div class="repos" id="repos"> </div>
+				<ul class="repos" id="repos"> </ul>
 			</div>
 		</div>
 	`;
 
+	fetchRepos();
+
 	main.innerHTML = cardHTML;
-}
-
-function addReposToCard(repos) {
-	const reposEl = document.getElementById('repos');
-	console.log(repos);
-
-	repos
-		.sort((a, b) => b.stargazers_count - a.stargazers_count)
-		.slice(0, 9)
-		.forEach((repo) => {
-			const repoEl = document.createElement('span');
-			repoEl.classList.add('repo');
-			repoEl.href = repo.html_url;
-			repoEl.target = '_blank';
-			repoEl.innerText = repo.name;
-
-			reposEl.appendChild(repoEl);
-		});
 }
 
 form.addEventListener('submit', (e) => {
